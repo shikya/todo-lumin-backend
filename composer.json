@@ -1,0 +1,14 @@
+{
+    "name": "shikya/todo-lumin-backend",
+    "description": "2 part project for Todo list as Frontend and Backend are separated.",
+    "require": {
+        "laravel/lumen": "^5.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shrikant",
+            "email": "shrikantsonone@gmail.com"
+        }
+    ]
+}

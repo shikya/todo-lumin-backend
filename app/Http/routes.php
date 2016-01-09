@@ -11,6 +11,16 @@
 |
 */
 
-$app->get('/', function () use ($app) {
+$app->get('/',['middleware' => 'cros', function () use ($app) {
 	return App\Todo::all();
-});
+}]);
+
+$app->post('/',['middleware' => 'cros', function (Illuminate\Http\Request $request) use ($app) {
+	$todo = new App\Todo;
+	$todo->name = $request->name;
+	$todo->save();
+	return $todo->toJson();
+}]);
+
+$app->options('/',['middleware' => 'cros', function () use ($app) {
+}]);
